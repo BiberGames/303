@@ -579,7 +579,6 @@
                 if (this.invertTimer > this.config.INVERT_FADE_DURATION) {
                     this.invertTimer = 0;
                     this.invertTrigger = false;
-                    document.body.style.backgroundColor = "blue";
                     //this.invert();
                 } else if (this.invertTimer) {
                     this.invertTimer += deltaTime;
