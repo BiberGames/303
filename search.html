@@ -98,5 +98,17 @@
         <input class="button" type="submit" value="Suche">
       </form>
     </div>
+          <script>
+        window.onload = function() {
+        var faviconIndex = 0;
+        var favicon = document.getElementById('favicon');
+    
+        setInterval(function() {
+                favicon.href = "icons/" + faviconIndex + ".png";
+                faviconIndex++;
+                faviconIndex %= 19;
+          }, 44);
+        };
+      </script>
   </body>
 </html>
