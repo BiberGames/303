@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link id="favicon" rel="icon" href="icons/0.png" type="image/png" sizes="32x32">      <title>Benjamin's Website - :(</title>
+    <link id="favicon" rel="icon" href="icons/0.png" type="image/png" sizes="32x32">
+      <title>==========Benjamin's Website - :(====================Benjamin's Website - :(==========</title>
         <style>
           @font-face{
             font-family: "STANDART";
@@ -65,17 +66,25 @@
       <br />
       meh. (Die seite die du aufrufen wolltest nicht freigeschaltet)
     </div>
-      <script>
-        window.onload = function() {
-        var faviconIndex = 0;
-        var favicon = document.getElementById('favicon');
-    
-        setInterval(function() {
-                favicon.href = "icons/" + faviconIndex + ".png";
-                faviconIndex++;
-                faviconIndex %= 19;
-          }, 44);
-        };
-      </script>
+    <script>
+      window.onload = function() {
+      var faviconIndex = 0;
+      var favicon = document.getElementById('favicon');
+      var t = document.title;
+      var i = 1
+  
+      setInterval(function() {
+              favicon.href = "icons/" + faviconIndex + ".png";
+              faviconIndex++;
+              faviconIndex %= 19;
+              var len = document.title.length;
+              if(len == 0){
+              i = 0;
+              }
+              document.title = t.substring(i, t.length);
+              i++;
+              }, 44);
+      };
+    </script>
   </body>
 </html>
